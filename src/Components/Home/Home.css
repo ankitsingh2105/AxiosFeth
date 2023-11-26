@@ -1,0 +1,76 @@
+#CardSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mainHeading {
+    margin-bottom: -5px;
+}
+
+.cards {
+    flex-direction: column;
+}
+
+.inputText {
+    margin-left: auto;
+    margin-bottom: 25px;
+}
+
+.inputText input {
+    padding: 5px 3px;
+    width: 10%;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 4px solid #3498db;
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width : 999px) {
+    #CardSection {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width : 674px) {
+    #CardSection {
+        grid-template-columns: 1fr;
+    }
+
+    .inputText {
+        display: flex;
+        justify-content: center;
+        margin: unset;
+        margin: 20px 0px;
+    }
+}
+
+@media only screen and (max-width : 427px) {
+    .mainHeading {
+        font-size: 20px;
+    }
+}
